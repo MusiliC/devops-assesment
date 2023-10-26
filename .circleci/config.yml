@@ -6,7 +6,7 @@ jobs:
   build:
     # builds occur in a docker container
     docker:
-      - image: cimg/python:3.8.10
+      - image: cimg/python:3.12.0
     working_directory: ~/repo
 
     # series/ list of steps done for the build
@@ -21,7 +21,8 @@ jobs:
             . venv/bin/activate
             pip install --upgrade pip
             pip install -r requirements.txt
+            pytest
     # Run the tests for our scripts
-      - run:
-          name: Run tests
-          command: pytest
+      # - run:
+      #     name: Run tests
+      #     command: pytest
