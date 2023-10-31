@@ -12,7 +12,7 @@ pipeline {
         stage('Test') {
             steps {
                 // Install Python (adjust version if needed)
-             3'
+         
 
                 // Install project dependencies (if any)
                 sh 'pip install -r requirements.txt'  // If you have a requirements.txt file
